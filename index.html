@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RuneForge — Niyetine göre rün çemberi</title>
+    <!-- Test sürümü: arama motorlarında listelenmez, önbelleğe/çeviriye alınmaz. -->
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex, notranslate" />
+    <meta name="copyright" content="© 2026 RuneForge. Tüm hakları saklıdır." />
+    <meta
+      name="description"
+      content="Niyetine göre rün çemberi: niyetini seç, Elder Futhark rünlerini düzenle, çemberini tasarla ve görsel olarak indir."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Yazı tipi stil dosyası çizimi BEKLETMEZ (2026-11-07 performans turu): önce yükle,
+         inince uygula. İlk anda yedek yazı tipi görünür, sonra Cinzel/Inter'e geçer
+         (display=swap). JavaScript kapalıysa noscript yedeği normal yükler. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      />
+    </noscript>
+    <script type="module" crossorigin src="./assets/index-CGN_76BS.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B1GNaYT8.css">
+  </head>
+  <!-- Gövde stilleri `src/index.css` içindeki `body` kuralından gelir; burada
+       derleyicisi olmayan Tailwind sınıfları kullanılmaz (sessizce etkisiz kalırlar). -->
+  <body>
+    <!-- STATİK AÇILIŞ EKRANI (2026-11-07 performans turu). Sayfa tamamen JS ile çizildiği için
+         ilk boyama ~570 KB paketi bekliyordu. Bu kabuk hemen görünür; React kökü çizince
+         `createRoot().render()` içeriği değiştirir ve kabuk kendiliğinden kalkar. Sınıf yok
+         (index.html'deki sınıflar Tailwind denetiminden geçmek zorunda): yalnız id + satır içi stil. -->
+    <style>
+      #boot-shell { min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+        justify-content: center; gap: 12px; padding: 16px; background: #06070a; color: #f3f4f6;
+        font-family: 'Cinzel', Georgia, serif; text-align: center; }
+      #boot-shell h1 { margin: 0; font-size: 28px; letter-spacing: 0.12em; color: #fbbf24; }
+      #boot-shell p { margin: 0; font-size: 14px; color: #a1a1aa; font-family: 'Inter', system-ui, sans-serif; }
+      #boot-ring { width: 40px; height: 40px; border-radius: 50%; border: 3px solid #3f3f46;
+        border-top-color: #f59e0b; animation: boot-spin 1s linear infinite; }
+      @keyframes boot-spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { #boot-ring { animation: none; } }
+    </style>
+    <div id="root">
+      <div id="boot-shell" role="status" aria-live="polite">
+        <h1>RUNEFORGE</h1>
+        <p>Niyetine göre rün çemberi</p>
+        <div id="boot-ring" aria-hidden="true"></div>
+        <p>Yükleniyor…</p>
+      </div>
+    </div>
+    <noscript>
+      <p style="color:#f3f4f6;text-align:center;padding:16px">RuneForge çalışmak için JavaScript gerektirir.</p>
+    </noscript>
+  </body>
+</html>
